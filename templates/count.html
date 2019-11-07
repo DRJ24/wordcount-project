@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p><a href="{% url 'home' %}">Start Again</a></p>
+    <h1>COUNTED <em>{{ count }}</em> WORDS</h1>
+    <h4>Your Text: {{ fulltext }}</h4>
+      {% for word, countTotal in sortedWords %}
+      {{ word }} appears {{ countTotal }} time(s) <br>
+
+      {% endfor %}
+
+
+
+  </body>
+</html>
